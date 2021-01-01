@@ -4,7 +4,7 @@ import code as c
 c.create("Oberoi",15)
 #creating a key with key_name,value given and with no time-to-live property
 
-c.create("Radisson",60,2600) 
+c.create("Radisson",60,60) 
 #creating a key with key_name,value given and with time-to-live property value given in number of seconds
 
 c.read("Oberoi")
