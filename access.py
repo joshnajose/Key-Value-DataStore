@@ -1,28 +1,28 @@
 #importing the main file as a library 
-import code as x 
+import code as c
 
-x.create("Oberoi",15)
+c.create("Oberoi",15)
 #creating a key with key_name,value given and with no time-to-live property
 
-x.create("Radisson",60,2600) 
+c.create("Radisson",60,2600) 
 #creating a key with key_name,value given and with time-to-live property value given in number of seconds
 
-x.read("Oberoi")
+c.read("Oberoi")
 #for returning the value of the respective key in Jasonobject format 'key_name:value'
 
-x.read("Radisson")
+c.read("Radisson")
 #for returning the value of the respective key in Jasonobject format if the TIME-TO-LIVE IS NOT EXPIRED else it returns an ERROR
 
-x.create("Radisson",40)
+c.create("Radisson",40)
 #returns an ERROR since the key_name already exists in the database
 
 #To overcome this error 
 #either use modify operation to change the value of a key
-x.modify("Radisson",50)
+c.modify("Radisson",50)
 #it replaces the initial value of the respective key with new value 
 
 #or use delete operation and recreate it
-x.delete("Radisson")
+c.delete("Radisson")
 #it deletes the respective key and its value from the database
 
 #to access these using multiple threads like
